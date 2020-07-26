@@ -1,0 +1,99 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ClickBankTrxTable" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="546,748" sap2010:WorkflowViewState.IdRef="ClickBankTrxTable_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ClickBankTrxTable" sap:VirtualizedContainerService.HintSize="526,688" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="BAnkTrxEist" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="484,596" sap2010:WorkflowViewState.IdRef="DoWhile_1">
+      <DoWhile.Condition>
+        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="not BAnkTrxEist" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+      </DoWhile.Condition>
+      <Sequence sap:VirtualizedContainerService.HintSize="376,434" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:ClickText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Double Click on  bank Transaction Log Screen" FormattedText="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="ClickText_1" KeyModifiers="None" MouseButton="BTN_RIGHT" Occurrence="1" SendWindowMessages="False" Text="Bank Trx Table by TRX NUMBER or Org ID">
+          <ui:ClickText.CursorPosition>
+            <ui:CursorPosition Position="Center">
+              <ui:CursorPosition.OffsetX>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetX>
+              <ui:CursorPosition.OffsetY>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetY>
+            </ui:CursorPosition>
+          </ui:ClickText.CursorPosition>
+          <ui:ClickText.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ebf318ae91570ab17d7cdac5e7b3e26f" Selector="&lt;wnd app='rightnow.cx.exe' cls='HwndWrapper*' title='dafzprod__*  -  Oracle Service Cloud' /&gt;&lt;wnd ctrlname='ExplorerView' /&gt;&lt;wnd ctrlname='toolStripContainer1' /&gt;&lt;wnd ctrlname='_list' /&gt;" WaitForReady="INTERACTIVE" />
+          </ui:ClickText.Target>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ClickText>
+        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+        <ui:ImageFound DisplayName="Image Exists 'RightNow.CX.exe'" Found="[BAnkTrxEist]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ImageFound_2">
+          <ui:ImageFound.Image>
+            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+          </ui:ImageFound.Image>
+          <ui:ImageFound.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd aaname='DropDown' app='rightnow.cx.exe' cls='WindowsForms10.Window.*' idx='1' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+          </ui:ImageFound.Target>
+        </ui:ImageFound>
+      </Sequence>
+    </DoWhile>
+  </Sequence>
+</Activity>
